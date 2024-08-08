@@ -2,29 +2,78 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dia 1: Prueba de etiquetas</title>
 </head>
-<body>
-    <h1>En esta prueba usaremos etiquetas comunes de HTML5 y XML</h1>
-    <p> Mi github es: <a href="https://github.com/kalashbg-dev"> este</a></p>
-    <h2>Soy agricultor y empresario independiente <hr /> y estoy aprendiendo:</h2>
-        <ul>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li> tambien Javascript</li>
-        </ul>
-    <h2>Cosas favoritas <br> que hacer</h2>
-    <p>recreativas</p>
-        <ol>
-            <li>Actividades <em>varias</em>: caminar </li>
-            <li>Actividades <strong>varias</strong>: leer</li>
-            <li>Actividades varias: jugar</li>
-            <li>Actividades varias: cantar</li>
-        </ol>
-    <div>
-        <h4>Este soy yo (LoL):</h4>
-        <img src="https://www.mildot.es/media/catalog/product/cache/6bd2c238522cababc89951abf636dddf/f/u/fusil-asalto-kalashnikov-ak47-aeg-blowback-6mm.jpg">
-    </div>
-</body>
+    <body>
+        <header style="background: rgba(42, 105, 240, 0.15); gap: 100px">
+            <h1>Etiquetas comunes de HTML5 y XML</h1>
+            <h3> por <em>Kalashnikov Bello</em> | Agricultor</h3>
+                <img 
+                    style="width:110px; mix-blend-mode: multiply;" 
+                    src="https://avatars.githubusercontent.com/u/173436961?v=4" alt="mi foto">
+                <figcaption> "Always Learning"
+                </figcaption>
+            <hr />
+        </header>
+        <main>
+            <Fieldset>
+                <Legend>Acerca de mi</Legend>
+            <h2>Soy agricultor y empresario independiente y estoy aprendiendo:
+            </h2>
+                <ol>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li> tambien Javascript</li>
+                </ol>
+            <h2>Cosas favoritas <br> que hacer</h2>
+            <p><STRONG>RECREATIVAS</STRONG></p>
+            <ul>
+                <li>Actividades <em>varias</em>: caminar </li>
+                <li>Actividades <strong>varias</strong>: leer</li>
+                <li>Actividades varias: jugar</li>
+                <li>Actividades varias: cantar</li>
+            </ul>
+            </Fieldset>
+        <fieldset>
+        <legend>Kalashnikov AK-47
+        </legend>
+            <h4>Este soy yo (LoL):</h4>
+                <img src="data:image/jpeg;base64,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SEREAREQBERAEREAREQBERAEREAREQBERAEREA0tqYIVqNWixIFRHpkjiA6lSR26yoR6KcYGAFaiVFrNeoDp1rlPleXXPJDSfJaMnHgqrA+iBb3r4pj1imir/Mxb4SVbM9H2z6Oow6u3XVJqeOVuiD3ASVxCSQcpPlnD3T2D8iw4w4fOAzsGtbR3LAWueAI7zed2IklRERAEREAREQDyRX0kbT9RgKtjZ6lqK9d6mjW7QmdvdkqlTemLFsa2Go2OVVep2MxIUeKgN9eVk6TZkxR3SSK+XQW5fhyEx4XBnEYinh1verUVdOS3szeAznwn07W16h5dWslvof2d6zGvWbUUE0vxz1LqCPdD+cwRXVG/llUGy66VMKAqiwAAAHAACwEyxE2TmCIiAeSM78YPNQFQDWkwb3T0X8ACG92SWYsRRWojIwurKVIPAgixHkZTJBTi4vuXxTcJqS7Mp/La4n2sz4rCtSdqTXLIcpJ/aH7L+K2PeSJhJnmJRcZOL5R6qM1OKa7ng0ut7c/A3+Bv9ktLYWN9dQp1D7RFm+kujfaDKsqHn/dv718JK9w8fZmoMePSH0gLMPEAHwab+gy7cm18P9mj6jh34ty5X6J1E8ns7ZwBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAPJwN6N16OOVRULKyXKOhAdb2uNQQVNhcEcp34hqyU2naKfx/orxS/9nEU6i9VQNTNurohgfskn3B3RrYR6tfEOjVKiogCXKhV5sxVbsdOXLib6TmJVQSdoySzTktrfQ9iIljEIiIAiIgEL362d7NcDhZG7ieg3gSR7w6pDXPOW5jMMtRGRhcMCD3EW4yqcfhWpO1NvaU2J5EcQw7CLHxnF9Rw7ZLIuHydz0zPuj7b5XH0NbNMuGqlGVlNiCCD3cPLh3d8whZ6WtoO//jx/Cc9PwdVxT6FsbJ2gK9Jag0vxHURoR5/jN+VnurtdqNQLYmm5VSBqQx0VgOvkRzHdLMnotNm92F9+55fV6f2Mjj27H1ERNg1hERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREA8kN382ddBiFGqDK/ahOje6T5M3VJlMOIoq6sjAMrAqwPAgixB7CJjy41ki4vuZcOV4pqa7FOF5mweEaqwVVLE8ANTbS9uodZOn39TDboV/XPRNxTX2apF1ZD7IOoJYDQjTUcr3k92TsmnQXKg1PtMdWY9p6uoCwHITl4NA9zc+F+Tsar1GKilj6t9/Bobu7vCgAzkPU1tb2UvxCm1yTzY9tgoNpIYi060YqKpI4k5ym7k7Z7ERLFRERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQD/2Q==">
+                </fieldset>
+            </main>
+        <footer>
+            <fieldset>
+                <legend>Mis Redes Sociales
+                </legend> 
+                    <nav rel="noopener noreferrer">
+                        <!-- Enlaces a redes sociales --> 
+                        
+                        <a href="#github">
+                        <img 
+                        style= "width: 60px"
+                        src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub" />
+                        </a>
+                        
+                        <a href="#" target="_blank">
+                        <img
+                        style= "width: 50px"
+                        src="https://freepnglogo.com/images/all_img/1691832581twitter-x-icon-png.png" />
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/kalashbg" target="_blank">
+                        <img 
+                        style= "width: 50px"
+                        src="https://freepnglogo.com/images/all_img/1715491568linkedin-icon-png.png" alt="LinkedIn">
+                        </a>
+                        
+                        <a href="https://www.instagram.com/kalashbg" target="_blank" rel="noopener noreferrer">
+                        <img 
+                        style= "width: 50px"
+                        src="https://img.newoldstamp.com/i/0/1/0/0/98.png?SUkmF" alt="Instagram" />
+                        </a>
+                    </nav>
+            </fieldset>
+        </footer>
+    </body>
 </html>
