@@ -1,0 +1,59 @@
+body {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+header {
+display: block;
+background-color: green;
+text-align: center;
+}
+
+nav ul li{
+list-style-type: none;
+padding: 0;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+}
+
+.contenido {
+display: flex;
+flex-wrap: warp;
+justify-content: space-around;
+padding: 20px;
+}
+
+.columna {
+background-color: #f4f4f4;
+padding: 20px;
+margin: 10px;
+flex: 1 1 calc(33.333% -40px);
+box-shadow: 2px 2px 2px #0097a7;
+}
+
+footer {
+background-color: red;
+color: white;
+padding: 10px;
+margin-top:20px;
+text-align:center;
+}
+/* Diseño Responsivo*/
+
+@media (max-width: 700px) {
+header section {
+    flex: 1 1 calc(50% - 40px);
+    margin: 10px 0;
+}
+}
+
+@media (max-width: 400px) {
+footer {
+    flex: 1 1 100%;
+    margin: 10px 0;
+}
+}

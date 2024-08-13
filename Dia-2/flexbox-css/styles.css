@@ -1,0 +1,26 @@
+.contenedor {
+display: flex;
+justify-content: space-around;
+padding: 20px;
+}
+
+.caja {
+width: 200px;
+padding: 12px;
+margin: 12px;
+border: 3px dashed #4b2122;
+background-color: #6f9f7f;
+border-radius: 20px;
+box-sizing: border-box;
+}
+
+.caja h2 {
+margin: 0 0 10px 0;
+font-size: 18px;
+}
+
+.caja p {
+margin: 0;
+font-size: 18px;
+color: blue;
+}
