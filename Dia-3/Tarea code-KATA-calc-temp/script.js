@@ -1,16 +1,16 @@
 // Agrega un evento al botón de conversión
-document.getElementById('convertBtn').addEventListener('click', () => {
+document.getElementById('convertButn').addEventListener('click', () => {
     // Obtiene el valor de la temperatura ingresada y la escala que se elige
     const temp = parseFloat(document.getElementById('temperature').value);
     const scale = document.getElementById('scale').value;
 
     // Verifica que sea un numero, Aqui nos aseguramos
     if (isNaN(temp)) {
-        alert('Por favor, ingrese una temperatura válida.');
+        alert('Por favor, ingrese una temperatura que sea válida.');
         return;
     }
 
-    // Funciones de conversión aqui
+    // Funciones de conversión aquí
     const celsiusToFahrenheit = celsius => (celsius * 9/5) + 32;
     const celsiusToKelvin = celsius => celsius + 273.15;
     const fahrenheitToCelsius = fahrenheit => (fahrenheit - 32) * 5/9;
