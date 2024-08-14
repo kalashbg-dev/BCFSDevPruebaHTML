@@ -1,16 +1,16 @@
 // Agrega un evento al botón de conversión
 document.getElementById('convertBtn').addEventListener('click', () => {
-    // Obtiene el valor de la temperatura ingresada y la escala seleccionada
+    // Obtiene el valor de la temperatura ingresada y la escala que se elige
     const temp = parseFloat(document.getElementById('temperature').value);
     const scale = document.getElementById('scale').value;
 
-    // Verifica si la entrada de temperatura es un número válido
+    // Verifica que sea un numero, Aqui nos aseguramos
     if (isNaN(temp)) {
         alert('Por favor, ingrese una temperatura válida.');
         return;
     }
 
-    // Funciones de conversión de temperaturas
+    // Funciones de conversión aqui
     const celsiusToFahrenheit = celsius => (celsius * 9/5) + 32;
     const celsiusToKelvin = celsius => celsius + 273.15;
     const fahrenheitToCelsius = fahrenheit => (fahrenheit - 32) * 5/9;
@@ -18,12 +18,12 @@ document.getElementById('convertBtn').addEventListener('click', () => {
     const kelvinToCelsius = kelvin => kelvin - 273.15;
     const kelvinToFahrenheit = kelvin => (kelvin - 273.15) * 9/5 + 32;
 
-    // Variables para almacenar los resultados de las conversiones
+    // Estas variables son para almacenar los resultados de las conversiones
     let resultCelsius = 0;
     let resultFahrenheit = 0;
     let resultKelvin = 0;
 
-    // Realiza las conversiones según la escala seleccionada
+    // Las conversiones usando switch como dice el profe
     switch (scale) {
         case 'celsius':
             resultCelsius = temp;
@@ -45,7 +45,7 @@ document.getElementById('convertBtn').addEventListener('click', () => {
             return;
     }
 
-    // Muestra los resultados en los elementos correspondientes
+    // Muestra los resultados donde deben ir.
     document.getElementById('result-celsius').textContent = `Celsius: ${resultCelsius.toFixed(2)}`;
     document.getElementById('result-fahrenheit').textContent = `Fahrenheit: ${resultFahrenheit.toFixed(2)}`;
     document.getElementById('result-kelvin').textContent = `Kelvin: ${resultKelvin.toFixed(2)}`;
