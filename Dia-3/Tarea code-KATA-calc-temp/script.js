@@ -55,3 +55,13 @@ document.getElementById('convertButn').addEventListener('click', () => {
   console.log(`Fahrenheit: ${resultFahrenheit.toFixed(2)}`);
   console.log(`Kelvin: ${resultKelvin.toFixed(2)}`);
 });
+
+// Agrega un evento al botón de limpieza, APORTE DE MADRIGAL, EL ABUSADOR!
+document.getElementById('clearButn').addEventListener('click', () => {
+    // Limpia los campos de entrada y los resultados
+    document.getElementById('temperature').value = '';
+    document.getElementById('scale').value = '';
+    document.getElementById('result-celsius').textContent = 'Celsius:';
+    document.getElementById('result-fahrenheit').textContent = 'Fahrenheit:';
+    document.getElementById('result-kelvin').textContent = 'Kelvin:';
+});

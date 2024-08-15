@@ -59,6 +59,13 @@
   transition: background-color 0.3s;
   border: none;
   }
+  #clearButn {
+  background: linear-gradient(to right, #8cc2b0, #65f071);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  }
 
   /* Efecto hover del botón */
   button:hover {
