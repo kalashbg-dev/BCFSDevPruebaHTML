@@ -22,11 +22,31 @@ text-decoration: none;
 
 .contenido {
 display: flex;
-flex-wrap: warp;
 justify-content: space-around;
 padding: 20px;
 }
 
+.menu{
+display: flex;
+flex-wrap: warp;
+justify-content: space-around;
+padding: 1rem;
+text-align: center;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+li {
+    display:flex;
+    background-color: rgba(0, 0, 255, 0.13);
+    box-shadow: 2px 2px 2px #d38e0e;
+    border-radius: 25%;
+    transition: transform 0.3s ease
+    
+}
+
+li:hover {
+    transform: scale(1.2)
+}
 .columna {
 background-color: #f4f4f4;
 padding: 20px;
@@ -35,6 +55,11 @@ flex: 1 1 calc(33.333% -40px);
 box-shadow: 2px 2px 2px #0097a7;
 }
 
+.columna:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.08)
+
+}
 footer {
 background-color: red;
 color: white;
