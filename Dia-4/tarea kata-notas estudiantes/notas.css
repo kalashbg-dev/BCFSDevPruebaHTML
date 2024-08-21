@@ -133,7 +133,8 @@ h1 {
 
 .estudiante .promedio {
   font-size: 1em;
-  color: #d08770;
+  color: #000000;
+  font-weight: 600;
 }
 
 @media (max-width: 600px) {
@@ -142,7 +143,7 @@ h1 {
   }
 }
 
-/* Nuevos estilos */
+/* Nuevos estilos para ver promedios*/
 .estudiante.por-encima {
   background-color: #99e05a;
 }
