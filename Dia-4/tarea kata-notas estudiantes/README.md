@@ -1,6 +1,6 @@
 # Explicación del Código de Manejo de Calificaciones de Estudiantes
 
-Hola, soy un desarrollador junior y voy a explicarte el código que se encarga de manejar las calificaciones de un grupo de estudiantes de un curso de programación. Este código es bastante útil y te ayudará a entender cómo puedes trabajar con datos de estudiantes en JavaScript.
+Hola, soy estudiante de desarrollo web, a nivel junior y voy a explicarte el código que se encarga de manejar las calificaciones de un grupo de estudiantes de un curso de programación. Este código es bastante útil y te ayudará a entender cómo puedes trabajar con datos de estudiantes en JavaScript.
 
 ## Descripción General
 
