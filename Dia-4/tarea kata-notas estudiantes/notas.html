@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Dashboard de Calificaciones</title>
+    <link rel='stylesheet' href='notas.css'>
+</head>
+<body>
+    <div class='container'>
+        <header>
+            <h1>Dashboard de Calificaciones</h1>
+            <nav class='controls'>
+                <div class="menu-sandwich">
+                    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                    <input type="checkbox" id="menu-toggle" style="display: none;">
+                    <div class="menu-content">
+                        <button onclick="ordenar('nombre', 'asc')">Nombre (Ascendente)</button>
+                        <button onclick="ordenar('nombre', 'desc')">Nombre (Descendente)</button>
+                        <button onclick="ordenar('calificacion', 'asc')">Calificación (Ascendente)</button>
+                        <button onclick="ordenar('calificacion', 'desc')">Calificación (Descendente)</button>
+                    </div>
+                </div>
+                <input type="text" id="buscar" placeholder="Buscar estudiante...">
+                <button id="agregar-estudiante">Agregar Estudiante</button>
+                <button id="borrar-estudiante">Borrar Estudiante</button>
+                <button id="refrescar">Refrescar</button>
+            </nav>
+        </header>
+        <main id='dashboard'></main>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <script src='notas.js'></script>
+</body>
+</html>
