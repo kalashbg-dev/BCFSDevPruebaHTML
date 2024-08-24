@@ -1,0 +1,23 @@
+[
+  {
+    "tarea": "aprender json"
+  },
+  {
+    "nombre": "Marianela",
+    "edad": 20,
+    "grado": 3,
+    "especialidad": "Matematicas"
+  },
+  {
+    "nombre": "Josefa",
+    "edad": 21,
+    "grado": 3,
+    "especialidad": "Cálculo"
+  },
+  {
+    "nombre": "Carlota",
+    "edad": 22,
+    "grado": 4,
+    "especialidad": "Química"
+  }
+]

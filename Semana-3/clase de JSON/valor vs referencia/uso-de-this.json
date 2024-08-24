@@ -1,0 +1,25 @@
+{
+  "class": "Humano",
+  "constructor": {
+    "parameters": ["higado", "pancrea", "vesicula"],
+    "properties": {
+      "higado": "higado",
+      "pancrea": "pancrea",
+      "vesicula": "vesicula"
+    }
+  },
+  "methods": {
+    "transplanteDehigado": {
+      "parameter": "higadoDonado",
+      "action": "this.higado = higado"
+    },
+    "transplanteDePancrea": {
+      "parameter": "pancreaDonado",
+      "action": "this.pancrea = pancrea"
+    },
+    "transplanteDeVesicula": {
+      "parameter": "vesiculaDonado",
+      "action": "this.vesicula = vesicula"
+    }
+  }
+}

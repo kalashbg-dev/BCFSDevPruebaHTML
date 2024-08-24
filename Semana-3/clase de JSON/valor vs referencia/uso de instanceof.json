@@ -1,0 +1,34 @@
+
+{
+  "class": "Bicicleta",
+  "constructor": {
+    "parameters": ["color", "tipo"],
+    "properties": {
+      "color": "color",
+      "tipo": "tipo"
+    }
+  },
+  "methods": {
+    "describir": {
+      "action": "console.log(`Una bicicleta ${this.tipo} de color ${this.color}.`);"
+    }
+  },
+  "instances": {
+    "miBicicleta": {
+      "class": "Bicicleta",
+      "arguments": ["roja", "montaña"]
+    }
+  },
+  "tests": [
+    {
+      "description": "Comprobamos si miBicicleta es una instancia de Bicicleta",
+      "code": "console.log(miBicicleta instanceof Bicicleta);",
+      "expectedOutput": "true"
+    },
+    {
+      "description": "Comprobamos si miBicicleta es una instancia de Date",
+      "code": "console.log(miBicicleta instanceof Date);",
+      "expectedOutput": "false"
+    }
+  ]
+}
