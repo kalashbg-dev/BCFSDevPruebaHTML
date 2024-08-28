@@ -84,6 +84,10 @@ li.completed {
   color: #45a29e;
 }
 
+li.completed span {
+  text-decoration: none; 
+}
+
 .delete-button {
   margin-left: 10px;
   padding: 5px;

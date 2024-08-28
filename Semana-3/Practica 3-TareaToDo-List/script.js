@@ -1,10 +1,10 @@
 // Obtener los elementos del DOM necesarios como se vio en clase pasada.
 const taskInput = document.getElementById('newTaskInput');
 const addTaskButton = document.getElementById('addTaskButton');
-const taskListContainer = document.getElementById('taskList'); // Aqui cambié el nombre para confundirme menos
-const clearAllButton = document.getElementById('clearAllButton'); //Agregué un Botón (color rojo) para eliminar todas las tareas
+const taskListContainer = document.getElementById('taskList'); // Aquí cambié el nombre para confundirme menos
+const clearAllButton = document.getElementById('clearAllButton'); // Agregué un botón (color rojo) para eliminar todas las tareas
 
-//el listener al botón de añadir tarea y al boton de eliminar todas
+// El listener al botón de añadir tarea y al botón de eliminar todas
 addTaskButton.addEventListener('click', () => {
     const newTask = taskInput.value.trim();
 
@@ -34,46 +34,42 @@ function addTask(taskDescription) {
     taskListContainer.appendChild(newListItem);
 }
 
-
-function createTaskElement(taskDescription) { //Crear elemento en lista , boton eliminar,
+// Función para crear un elemento de lista, botón eliminar dentro de un <span>
+function createTaskElement(taskDescription) { // Crear elemento en lista, botón eliminar
     const newListItem = document.createElement('li');
     newListItem.textContent = taskDescription;
 
-
+    const taskContent = document.createElement('span'); // Crear un <span> para contener el texto y el botón
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'X';
     deleteButton.classList.add('delete-button');
-
-    // estilo css del boton X, Esta parte no me funciona
-    deleteButton.style.textDecoration = 'none';
-    deleteButton.style.marginLeft = '10px';
-
     deleteButton.addEventListener('click', () => {
         deleteTask(newListItem);
     });
 
-    newListItem.appendChild(deleteButton);
+    taskContent.appendChild(deleteButton); // Añadir el botón dentro del <span>
+    newListItem.appendChild(taskContent); // Añadir el <span> al elemento de lista
 
     return newListItem;
 }
 
-// la x
+// La X
 function deleteTask(taskElement) {
     taskListContainer.removeChild(taskElement);
 }
 
-//Aquí las tareas se van todas para la chirola.
+// Aquí las tareas se van todas para la chirola.
 function clearAllTasks() {
     taskListContainer.innerHTML = '';
 }
 
 // Delegación de eventos para marcar tareas completadas
 taskListContainer.addEventListener('click', (event) => {
-    if (event.target.tagName === 'LI') {
-        event.target.classList.toggle('completed');
+    if (event.target.tagName === 'LI' || event.target.tagName === 'SPAN') { // Verificar si se hizo clic en un <li> o <span>
+        event.target.closest('li').classList.toggle('completed'); // Marcar o desmarcar la tarea como completada
     }
 
-    // Evitar que el evento se propague al hacer clic en el botón eliminar, tratando de corregir el boton tachado, pero fallé
+    // Evitar que el evento se propague al hacer clic en el botón eliminar
     if (event.target.tagName === 'BUTTON') {
         event.stopPropagation();
     }
