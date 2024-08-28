@@ -1,0 +1,115 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #1a1a1d;
+  color: #c5c6c7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.container {
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  color: #66fcf1;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#newTaskInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #66fcf1;
+  border-radius: 5px 0 0 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #c5c6c7;
+}
+
+#addTaskButton {
+  padding: 10px;
+  border: none;
+  background-color: #66fcf1;
+  color: #1a1a1d;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.3s;
+}
+
+#addTaskButton:hover {
+  background-color: #45a29e;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  background-color: rgba(102, 252, 241, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+li:hover {
+  background-color: rgba(102, 252, 241, 0.2);
+  transform: translateX(5px);
+}
+
+li.completed {
+  text-decoration: line-through; 
+  color: #45a29e;
+}
+
+.delete-button {
+  margin-left: 10px;
+  padding: 5px;
+  border: none;
+  background-color: rgba(102, 252, 241, 0.1);
+  color: #c5c6c7;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #73ffa249;
+}
+
+#clearAllButton {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #ff4040;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#clearAllButton:hover {
+  background-color: #ff7373;
+}
