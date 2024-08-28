@@ -1,97 +1,106 @@
 class Task {
-  constructor(description) {
-      this.description = description;
-      this.completed = false;
-  }
+	constructor(description) {
+			this.description = description;
+			this.completed = false;
+	}
 
-  toggleComplete() {
-      this.completed = !this.completed;
-  }
+	toggleComplete() {
+			this.completed = !this.completed;
+	}
 }
 
 class TodoList {
-  constructor() {
-      this.tasks = [];
-      this.taskInput = document.getElementById('newTaskInput');
-      this.addTaskButton = document.getElementById('addTaskButton');
-      this.taskListContainer = document.getElementById('taskList');
-      this.clearAllButton = document.getElementById('clearAllButton');
+	constructor() {
+			this.tasks = [];
+			this.taskInput = document.getElementById('newTaskInput');
+			this.addTaskButton = document.getElementById('addTaskButton');
+			this.taskListContainer = document.getElementById('taskList');
+			this.clearAllButton = document.getElementById('clearAllButton');
 
-      this.addTaskButton.addEventListener('click', () => this.addNewTask());
-      this.clearAllButton.addEventListener('click', () => this.clearAllTasks());
-      this.taskListContainer.addEventListener('click', (event) => this.handleTaskClick(event));
-  }
+			this.addTaskButton.addEventListener('click', () => this.addNewTask());
+			this.clearAllButton.addEventListener('click', () => this.clearAllTasks());
+			this.taskListContainer.addEventListener('click', (event) => this.handleTaskClick(event));
+	}
 
-  addNewTask() {
-      const newTaskDescription = this.taskInput.value.trim();
-      if (this.isValidTask(newTaskDescription)) {
-          const task = new Task(newTaskDescription);
-          this.tasks.push(task);
-          this.renderTask(task);
-          this.clearInput();
-      } else {
-          alert('Por favor, ingresa una tarea válida.');
-      }
-  }
+	addNewTask() {
+			const newTaskDescription = this.taskInput.value.trim();
+			if (this.isValidTask(newTaskDescription)) {
+					const task = new Task(newTaskDescription);
+					this.tasks.push(task);
+					this.renderTask(task);
+					this.clearInput();
+			} else {
+					alert('Por favor, ingresa una tarea válida.');
+			}
+	}
 
-  isValidTask(taskDescription) {
-      return taskDescription.length > 0;
-  }
+	isValidTask(task) {
+			return task.length > 0;
+	}
 
-  clearInput() {
-      this.taskInput.value = '';
-      this.taskInput.focus();
-  }
+	clearInput() {
+			this.taskInput.value = '';
+			this.taskInput.focus();
+	}
 
-  renderTask(task) {
-      const listItem = document.createElement('li');
-      listItem.textContent = task.description;
-      if (task.completed) {
-          listItem.classList.add('completed');
-      }
+	renderTask(task) {
+			const listItem = document.createElement('li');
+			listItem.textContent = task.description;
+			
+			const taskContent = document.createElement('span');
+			const deleteButton = document.createElement('button');
+			deleteButton.textContent = 'X';
+			deleteButton.classList.add('delete-button');
+			deleteButton.addEventListener('click', () => this.deleteTask(task));
 
-      const deleteButton = document.createElement('button');
-      deleteButton.textContent = 'X';
-      deleteButton.classList.add('delete-button');
-      deleteButton.style.textDecoration = 'none';
-      deleteButton.style.marginLeft = '10px';
+			taskContent.appendChild(deleteButton);
+			listItem.appendChild(taskContent);
 
-      listItem.appendChild(deleteButton);
-      this.taskListContainer.appendChild(listItem);
-  }
+			if (task.completed) {
+					listItem.classList.add('completed');
+			}
 
-  deleteTask(taskElement) {
-      const index = Array.from(this.taskListContainer.children).indexOf(taskElement);
-      if (index > -1) {
-          this.tasks.splice(index, 1);
-          this.taskListContainer.removeChild(taskElement);
-      }
-  }
+			this.taskListContainer.appendChild(listItem);
+	}
 
-  clearAllTasks() {
-      this.tasks = [];
-      this.taskListContainer.innerHTML = '';
-  }
+	deleteTask(task) {
+			const index = this.tasks.indexOf(task);
+			if (index > -1) {
+					this.tasks.splice(index, 1);
+					this.renderAllTasks();
+			}
+	}
 
-  handleTaskClick(event) {
-      if (event.target.tagName === 'LI') {
-          const index = Array.from(this.taskListContainer.children).indexOf(event.target);
-          if (index > -1) {
-              this.tasks[index].toggleComplete();
-              event.target.classList.toggle('completed');
-          }
-      } else if (event.target.classList.contains('delete-button')) {
-          event.stopPropagation();
-          this.deleteTask(event.target.parentElement);
-      }
-  }
+	clearAllTasks() {
+			this.tasks = [];
+			this.renderAllTasks();
+	}
+
+	renderAllTasks() {
+			this.taskListContainer.innerHTML = '';
+			this.tasks.forEach(task => this.renderTask(task));
+	}
+
+	handleTaskClick(event) {
+			if (event.target.tagName === 'LI' || event.target.tagName === 'SPAN') {
+					const listItem = event.target.closest('li');
+					const taskIndex = Array.from(this.taskListContainer.children).indexOf(listItem);
+					if (taskIndex > -1) {
+							this.tasks[taskIndex].toggleComplete();
+							listItem.classList.toggle('completed');
+					}
+			}
+
+			if (event.target.tagName === 'BUTTON') {
+					event.stopPropagation();
+			}
+	}
 }
 
 // Inicialización
 document.addEventListener('DOMContentLoaded', () => {
-  const todoList = new TodoList();
+	const todoList = new TodoList();
 });
-
 /* 
 
 Esta versión del código utiliza los principios de la POO:
