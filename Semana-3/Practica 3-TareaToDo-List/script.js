@@ -37,9 +37,10 @@ function addTask(taskDescription) {
 // Función para crear un elemento de lista, botón eliminar dentro de un <span>
 function createTaskElement(taskDescription) { // Crear elemento en lista, botón eliminar
     const newListItem = document.createElement('li');
-    newListItem.textContent = taskDescription;
+    newListItem.textContent = taskDescription; //el texto de la tarea.
 
     const taskContent = document.createElement('span'); // Crear un <span> para contener el texto y el botón
+    
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'X';
     deleteButton.classList.add('delete-button');

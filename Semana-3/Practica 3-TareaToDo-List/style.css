@@ -66,6 +66,7 @@ ul {
 li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 8px 0;
   background-color: rgba(102, 252, 241, 0.1);
   padding: 10px;
