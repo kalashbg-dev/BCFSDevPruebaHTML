@@ -120,6 +120,6 @@ Cambios y mejoras:
 - Los event listeners ahora están dentro del constructor de `TodoList`.
 - Se mejoró la gestión del estado de las tareas (completadas/no completadas).
 
-Este código es más organizado y se mantiene mejor.
+Este código es más organizado y se PUEDE mantener de mejor manera.
 
 */

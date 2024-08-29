@@ -1,6 +1,6 @@
 # Código hecho bajo el paradigma de la POO
 
-## LEA HASTA EL FINAL
+## LEA HASTA EL FINAL. ESTE CODIGO ES UNA VERSION HECHA CON FINES EDUCATIVOS
 
 ### 1. Clase Task
 
