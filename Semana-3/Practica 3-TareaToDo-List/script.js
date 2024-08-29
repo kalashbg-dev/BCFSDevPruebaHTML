@@ -70,7 +70,7 @@ taskListContainer.addEventListener('click', (event) => {
         event.target.closest('li').classList.toggle('completed'); // Marcar o desmarcar la tarea como completada
     }
 
-    // Evitar que el evento se propague al hacer clic en el botón eliminar
+    // Evitar que el evento se propague al hacer clic en el botón eliminar (no es necesario)
     if (event.target.tagName === 'BUTTON') {
         event.stopPropagation();
     }
