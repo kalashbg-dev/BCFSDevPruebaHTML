@@ -1,0 +1,15 @@
+.container{
+  display:inline-flex;
+  box-sizing:content-box;
+  border-style: dotted;
+  z-index: 1;
+}
+
+
+.box{
+  width: 100px;
+  height: 100px;
+  border: 1px solid green;
+  text-align: center;
+  display: inline-block;
+}
