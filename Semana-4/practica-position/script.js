@@ -1,11 +1,10 @@
-// Seleccionar elementos clave del DOM
 const toggleModeBtn = document.getElementById('toggleMode');
 const body = document.body;
 const sections = document.querySelectorAll('section');
 const toggleTextButtons = document.querySelectorAll('.toggleText');
 const footer = document.querySelector('footer');
 
-// Alternar entre modo claro y oscuro
+// Alternar 
 toggleModeBtn.addEventListener('click', () => {
   body.classList.toggle('light-mode');
   document.querySelector('header').classList.toggle('light-mode');
