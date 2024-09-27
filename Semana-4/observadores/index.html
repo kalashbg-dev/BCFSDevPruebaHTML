@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Comentario en Tiempo Real con RxJS</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1 class="titulo">Formulario de Comentarios</h1>
+
+  <textarea class="input" placeholder="Escribe tu comentario..." rows="5" cols="30"></textarea>
+  <button class="btn">Agregar Comentario</button>
+
+  <h3 class="subtitulo">Vista Previa:</h3>
+  <div class="preview"></div>
+
+  <div class="error"></div>
+
+  <h3 class="subtitulo">Comentarios Agregados:</h3>
+  <ul class="comments-list"></ul>
+
+  <script src="https://unpkg.com/rxjs@7/dist/bundles/rxjs.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
